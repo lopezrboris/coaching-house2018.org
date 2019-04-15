@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Cumbre universitaria COACHING HOUSE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/contador.css" />
+		<link rel="icon" type="image/ico" href="images/icono.jpg">
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+</head>
+<body class="homepage">
+
+  <div class="container">
+  <!--<span class="txt anim-text-flow">3 días, 7 horas, 17 minutos y 33 segundos</span>-->
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/skel-viewport.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/behavior.js"></script>
+  <script>
+
+setTimeout(function(){
+  $('.txt').html(function(i, html) {
+  var chars = $.trim(html).split("");
+
+  return '<span>' + chars.join('</span><span>') + '</span>';
+});
+}, 2000);
+
+
+// Set the date we're counting down to
+    var countDownDate = new Date("Apr 26, 2018 13:59:00").getTime();
+
+// Update the count down every 1 second
+    var x = setInterval(function() {
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = (days * 24) + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        //document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        //    + minutes + "m " + seconds + "s ";
+        $(".txt").html("A tan solo " +
+            //(days > 0 ? days + " días" : "") +
+            //(days > 0 ? days + (days==1 ? " día" : " días") : "") +
+            (hours > 0 ? (hours + (hours==1 ? " hora" : " horas")) : "") +
+            (minutes > 0 ? (days || hours ? ", ":"") + minutes + (minutes==1 ? " minuto" : " minutos") : "") +
+            (days || hours || minutes ? " y ":"") + seconds + (seconds==1 ? " segundo" : " segundos"));
+
+        // If the count down is over, write some text
+        if ($(".txt").html() == "A tan solo 0 segundos") {
+            clearInterval(x);
+
+            $(".txt").html("COACHING HOUSE");
+
+            setTimeout(function(){
+              $(".txt").hide();
+            },1000);
+        }
+
+$(".txt").attr("x", -(($(".txt")[0].clientWidth / 2)*1.5))
+    }, 1000);
+
+  </script>
+
+
+
+  <section id="banner" style="margin-bottom: 0px;">
+  </section>
+
+
+
+  <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  	 width="100%" top:"0" height="200" viewBox="0 0 800 280">
+  <style type="text/css">
+
+  <![CDATA[
+
+  	text {
+  		filter: url(#filter);
+  		fill: #f7e5b1;
+      	font-family: 'Roboto', sans-serif;
+      	font-size: 20em;
+  		-webkit-font-smoothing: antialiased;
+  		-moz-osx-font-smoothing: grayscale;
+       		}
+  ]]>
+  </style>
+  	<defs>
+
+  		<filter id="filter">
+  		    <feFlood flood-color="black" result="black" />
+  		    <feFlood flood-color="red" result="flood1" />
+  		    <feFlood flood-color="limegreen" result="flood2" />
+  			<feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
+  			<feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
+  			<feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
+  			<feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
+  		    <feComposite in="flood1" in2="off1a" operator="in"  result="comp1" />
+  		    <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
+
+   		  	<feMerge x="-50" width="100%" result="merge1">
+  				<feMergeNode in = "##01662e" />
+  				<feMergeNode in = "comp1" />
+  				<feMergeNode in = "off1b" />
+
+  				<animate
+  					attributeName="y"
+  		    		id = "y"
+  		    		dur ="2s"
+
+  		    		values = '104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6ßpx; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'
+
+  		    		keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+
+  		    		repeatCount = "indefinite" />
+
+  				<animate attributeName="height"
+  		    		id = "h"
+  		    		dur ="2s"
+
+  		    		values = '10px; 1px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
+
+  		    		keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+
+  		    		repeatCount = "indefinite" />
+  		    </feMerge>
+
+
+   			<feMerge x="-10" width="100%" y="10px" height="300px" result="merge2">
+  				<feMergeNode in = "#01662e" />
+  				<feMergeNode in = "comp2" />
+  				<feMergeNode in = "off2b" />
+
+  				<animate attributeName="y"
+  		    		id = "y"
+  		    		dur ="4s"
+  		    		values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;'
+
+  		    		keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
+
+   		    		repeatCount = "indefinite" />
+
+  				<animate attributeName="height"
+  		    		id = "h"
+  		    		dur = "4s"
+
+  					values = '0px; 0px; 0px; 26px; 26px; 22px; 22px; 0px; 0px; 15px; 20px; 32px; 43px; 21px; 0px; 0px; 20px'
+
+  		    		keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
+
+  		    		repeatCount = "indefinite" />
+  		    </feMerge>
+
+  		 	<feMerge>
+   				<feMergeNode in="SourceGraphic" />
+
+  				<feMergeNode in="merge1" />
+   			<feMergeNode in="merge2" />
+
+  		    </feMerge>
+  	    </filter>
+
+  	</defs>
+
+  <g>
+  	<text class="txt" x="-2400" y="230" height="500">Tiempo restante... </text>
+  </g>
+  </svg>
+
+
+
+</body>
+</html>
